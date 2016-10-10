@@ -1,6 +1,6 @@
 # Knightboard by Nico
 
-Thanks, it feels great taking a test graded by a real human :) I've developed and tested on Ubuntu 16.04, gcc version. The CMakeLists.txt automatically downloads and builds a copy of gtest for unit testing.
+Thanks, it feels great taking a test graded by a real human :)
 
 ```
 Look at **test.cpp** first, it contains Google Test unit tests for the requested functionality. **main.cpp** only has a few usage examples.
@@ -8,7 +8,15 @@ Look at **test.cpp** first, it contains Google Test unit tests for the requested
 
 **Tests**: using Google Test
 
-**Docs**: using Sphinx
+## Running
+
+I've developed and tested on OSX El Captain with clang. It's a CMake project, so:
+
+``
+mkdir build; cd build; cmake ..
+``
+
+You should also copy the `knightboard.txt` file over to your home folder. Let me know if there are any problems, I haven't done any extensive compat testing.
 
 ## Thoughts
 
