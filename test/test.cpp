@@ -108,7 +108,7 @@ TEST_F(Board32Test, shortest_path_lvl4) {
 
     PosVec32 v2{{0, 0},
                 {2, 1},
-                {4, 0},
+                {4, 2},
                 {6, 1}};
     EXPECT_EQ(v2, shortest_path_lvl4(board, {0, 0}, {6, 1}));
     EXPECT_EQ(true, is_valid_step_sequence(board, v2));

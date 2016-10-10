@@ -8,6 +8,7 @@
 #include <unordered_map>
 #include <queue>
 #include <stack>
+#include <map>
 #include <algorithm>
 #include <experimental/optional>
 #include <sstream>
@@ -94,8 +95,7 @@ struct Board {
     std::ostream &print(std::ostream &out,
                         std::experimental::optional<Pos> knight_pos = std::experimental::nullopt) const {
 
-        // A little map here
-        static std::unordered_map<BoardSquare, char> square_codes = {
+        static std::map<BoardSquare, char> square_codes = {
                 {BoardSquare::Clear,    '.'},
                 {BoardSquare::Water,    'W'},
                 {BoardSquare::Rock,     'R'},
@@ -206,23 +206,16 @@ struct Board {
     }
 
     void load_from_file() {
-        std::string line;
-        std::ifstream ifile;
-        ifile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
-
         std::string file_name = std::string(std::getenv("HOME")) + "/knightboard.txt";
 
-        try {
-            ifile.open(file_name);
-        } catch (const std::ifstream::failure& e) {
+        std::ifstream ifile(file_name);
+        if (!ifile.is_open()) {
             std::cerr << "Failed opening file at " << file_name << std::endl;
             exit(1);
         }
 
-        ifile.exceptions(0);
-
+        std::string line;
         std::vector<Pos> portals;
-
         int row_cnt = 0;
 
         while (std::getline(ifile, line)) {
