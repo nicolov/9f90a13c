@@ -13,7 +13,7 @@ Look at **test.cpp** first, it contains Google Test unit tests for the requested
 I've developed and tested on OSX El Captain with clang. It's a CMake project, so:
 
 ``
-mkdir build; cd build; cmake ..
+mkdir build; cd build; cmake ..; make -j2
 ``
 
 You should also copy the `knightboard.txt` file over to your home folder. Let me know if there are any problems, I haven't done any extensive compat testing.
