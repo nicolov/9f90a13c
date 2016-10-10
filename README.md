@@ -2,9 +2,8 @@
 
 Thanks, it feels great taking a test graded by a real human :)
 
-```
-Look at **test.cpp** first, it contains Google Test unit tests for the requested functionality. **main.cpp** only has a few usage examples.
-```
+> Look at **test.cpp** first, it contains Google Test unit tests for the requested functionality. **main.cpp** only has a few usage examples.
+
 
 **Tests**: using Google Test
 
