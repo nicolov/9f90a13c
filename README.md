@@ -10,13 +10,13 @@ Look at **test.cpp** first, it contains Google Test unit tests for the requested
 
 ## Running
 
-I've developed and tested on OSX El Captain with clang. It's a CMake project, so:
+I've developed and tested on Ubuntu 16.04 with CMake version 3.5.2 and gcc version 5.4.0, but OSX 10.10 works fine as well. For your convenience, I've built a Docker image that runs gtest:
 
-``
-mkdir build; cd build; cmake ..; make -j2
-``
+```
+docker run nicolov/knightboard:v1
+```
 
-You should also copy the `knightboard.txt` file over to your home folder. Let me know if there are any problems, I haven't done any extensive compat testing.
+If you want to compile and run locally, don't forget to copy the `knightboard.txt` file to your home directory.
 
 ## Thoughts
 
